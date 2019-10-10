@@ -2,7 +2,7 @@
 
 > 无与伦比的追求冰冷的敲打着我的灵魂
 
-[Preview](https://www.npmrundev.com) | [文档](https://www.npmrundev.com/archives/4/)
+[Preview](https://www.npmrundev.com) | [文档](https://www.npmrundev.com/index.php/archives/4)
 
 ![Demo](./screenshot.png)
 
@@ -22,4 +22,4 @@
 
 ## 使用
 
-请移步[文档](https://www.npmrundev.com/archives/4/),那是最新的
+请移步[文档](https://www.npmrundev.com/index.php/archives/4),那是最新的
