@@ -29,8 +29,16 @@
                 <?php else : ?>
                     <div class="no-login clearfix">
                         <p>
-                            <label for="author" class="required"><?php _e('好汉留名'); ?></label>
+                            <label for="author" class="required"><?php _e('称呼'); ?></label>
                             <input autocomplete="off" placeholder="必填" type="text" name="author" id="author" class="text" value="<?php $this->remember('author'); ?>" required placeholder="必填" />
+                        </p>
+                        <p>
+                            <label for="mail" <?php if ($this->options->commentsRequireMail) : ?> class="required" <?php endif; ?>><?php _e('Email'); ?></label>
+                            <input autocomplete="off" placeholder="非必填" type="email" name="mail" id="mail" class="text" value="<?php $this->remember('mail'); ?>" <?php if ($this->options->commentsRequireMail) : ?> required<?php endif; ?> />
+                        </p>
+                        <p>
+                            <label for="url" <?php if ($this->options->commentsRequireURL) : ?> class="required" <?php endif; ?>><?php _e('网站'); ?></label>
+                            <input autocomplete="off" placeholder="非必填" type="url" name="url" id="url" class="text" value="<?php $this->remember('url'); ?>" <?php if ($this->options->commentsRequireURL) : ?> required<?php endif; ?> />
                         </p>
                     </div>
                 <?php endif; ?>

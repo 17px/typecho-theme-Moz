@@ -1,12 +1,12 @@
 <?php
 
 /**
- * Moz-dev
+ * Moz
  * 
- * @package Moz-dev
+ * @package Moz
  * @author 陈睿
  * @version 1.0
- * @link https://www.bulibulo.com
+ * @link https://www.npmrundev.com
  */
 
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;

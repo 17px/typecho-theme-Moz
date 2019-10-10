@@ -2,7 +2,7 @@
 
 <footer id="footer">
     &copy; <?php echo date('Y'); ?> <?php $this->options->icpNum(); ?> |
-    <?php _e('<a href="https://www.npmrundev.com">Powered by Typecho</a> | <a class="author" href="https://www.npmrundev.com">Theme Moz</a>'); ?>
+    <?php _e('<a href="http://typecho.org">Powered by Typecho</a> | <a class="author" href="https://www.npmrundev.com">Theme Moz</a>'); ?>
 </footer><!-- end #footer -->
 
 <?php $this->footer(); ?>
@@ -24,18 +24,18 @@
 </script>
 
 <!-- lib -->
-<script src="<?php $this->options->themeUrl('./js/lib/jquery.min.js'); ?>"></script>
-<script src="<?php $this->options->themeUrl('./js/lib/highlight.min.js'); ?>"></script>
-<script src="<?php $this->options->themeUrl('./js/lib/md-toc.js'); ?>"></script>
+<script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="<?php $this->options->themeUrl('./js/lib/md-toc.min.js'); ?>"></script>
 <script>
     // 代码高亮
     hljs.initHighlightingOnLoad();
 </script>
 <!-- main -->
-<script src="<?php $this->options->themeUrl('./js/core.js'); ?>"></script>
-<script src="<?php $this->options->themeUrl('./js/theme.js'); ?>"></script>
+<script src="<?php $this->options->themeUrl('./js/core.min.js'); ?>"></script>
+<script src="<?php $this->options->themeUrl('./js/theme.min.js'); ?>"></script>
 <!-- /main -->
-<script src="<?php $this->options->themeUrl('./js/lib/jquery.pjax.min.js'); ?>"></script>
+<script src="https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
 <script>
     $(document).pjax(
         'a[href^="<?php Helper::options()->siteUrl() ?>"]:not(a[target="_blank"], a[no-pjax])', {
@@ -89,8 +89,7 @@
 
         });
 </script>
-<script src="<?php $this->options->themeUrl('./js/lib/less.js'); ?>"></script>
-<script src="<?php $this->options->themeUrl('./js/lib/nprogress.min.js'); ?>"></script>
+<script src="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
 <!-- /lib -->
 
 </html>
