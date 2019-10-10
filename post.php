@@ -4,13 +4,13 @@
 <!-- 文章页 -->
 <div id="post">
     <article class="post-card">
+        <h1 class="post-title" itemprop="name headline"><a href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h1>
         <p class="post-time">
             <i class="fa fa-fw fa-clock-o"></i>
             <time datetime="<?php $this->date('c'); ?>"><?php $this->date('Y年m月d日 H:i'); ?></time>
             <span><i class="fa fa-fw fa-eye"></i><?php get_post_view($this) ?></span>
             <span>分类: <?php $this->category(','); ?></span>
         </p>
-        <h1 class="post-title" itemprop="name headline"><a href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h1>
         <div id="post-toc" class="post-content markdown-body"><?php $this->content(); ?></div>
         <p class="tags"><span>#</span><?php $this->tags(', ', true, 'none'); ?></p>
         <ul class="post-meta clearfix">

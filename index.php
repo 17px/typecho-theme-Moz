@@ -1,12 +1,12 @@
 <?php
 
 /**
- * Moz更加强调阅读效率
+ * Moz-dev
  * 
- * @package Moz
- * @author Mozzie
+ * @package Moz-dev
+ * @author 陈睿
  * @version 1.0
- * @link https://www.npmrundev.com
+ * @link https://www.bulibulo.com
  */
 
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
@@ -42,8 +42,7 @@ $this->need('header.php');
 				<?php while ($obj->next()) : ?>
 					<?php if ($count < 5) : ?>
 						<?php if ($count == 1 || $count == 4) : ?>
-							<a class="article post-thumb-big" href="<?php $obj->permalink() ?>">
-								<img src="<?php showThumb($obj, true, 800, 300); ?>">
+							<a class="article post-thumb-big" href="<?php $obj->permalink() ?>" style="background-image:url(<?php showThumb($obj, true, 800, 300); ?>)">
 								<div class="mask"></div>
 								<h2 class="ellipse"><?php subText($obj->title, 20) ?>
 								</h2>
@@ -55,8 +54,7 @@ $this->need('header.php');
 								</div>
 							</a>
 						<?php else : ?>
-							<a class="article post-thumb-small" href="<?php $obj->permalink() ?>">
-								<img src="<?php showThumb($obj, true, 300, 300); ?>">
+							<a class="article post-thumb-small" href="<?php $obj->permalink() ?>" style="background-image:url(<?php showThumb($obj, true, 300, 300); ?>)">
 								<div class="mask"></div>
 								<h2 class="ellipse"><?php subText($obj->title, 10) ?>
 								</h2>

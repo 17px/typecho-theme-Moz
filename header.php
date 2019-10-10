@@ -9,9 +9,9 @@
     <!-- 网站图标 -->
     <link rel="shortcut icon" href="<?php $this->options->themeUrl('./img/favicon.ico'); ?>" type="image/x-icon" />
     <!-- 样式文件 -->
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('./css/style.css'); ?>" />
-    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+    <link rel="stylesheet/less" href="<?php $this->options->themeUrl('./less/style.less'); ?>" />
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('./css/font-awesome.min.css'); ?>" />
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('./css/nprogress.min.css'); ?>" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title><?php $this->archiveTitle(array(
@@ -69,7 +69,7 @@
                 <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
                 <?php while ($pages->next()) : ?>
                     <li>
-                        <a <?php if ($this->is('page', $pages->slug)) : ?> class="active" <?php endif; ?> href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><i class="fa-fw <?php $pages->fields->fontawesome(); ?>"></i><span><?php $pages->title(); ?></span></a>
+                        <a <?php if ($this->is('page', $pages->slug)) : ?> class="active" <?php endif; ?> target="<?php if ($pages->fields->target) : ?> _blank <?php endif; ?>" href="<?php $pages->fields->target ? $pages->fields->target() : $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><i class="fa-fw <?php $pages->fields->fontawesome(); ?>"></i><span><?php $pages->title(); ?></span></a>
                     </li>
                 <?php endwhile; ?>
             </ul>
