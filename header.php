@@ -9,9 +9,9 @@
     <!-- 网站图标 -->
     <link rel="shortcut icon" href="<?php $this->options->themeUrl('./img/favicon.ico'); ?>" type="image/x-icon" />
     <!-- 样式文件 -->
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('./css/style.css'); ?>" />
-    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+    <link rel="stylesheet/less" href="<?php $this->options->themeUrl('./less/style.less'); ?>" />
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('./css/font-awesome.min.css'); ?>" />
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('./css/nprogress.min.css'); ?>" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title><?php $this->archiveTitle(array(
@@ -46,7 +46,7 @@
         <!-- 主人信息 -->
         <div class="blogger">
             <div><img src="<?php $this->options->logoUrl() ?>"></div>
-            <p class="ellipse">Mozzie Chen</p>
+            <p class="ellipse"><?php $this->options->yourname() ?></p>
         </div>
 
 

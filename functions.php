@@ -10,6 +10,10 @@ function themeConfig($form)
     $logoUrl = new Typecho_Widget_Helper_Form_Element_Text('logoUrl', NULL, NULL, _t('头像图'), _t('这里填写 URL 地址,最好能走cdn或者oss,毕竟带宽小'));
     $form->addInput($logoUrl);
 
+    // 你的名字
+    $yourname = new Typecho_Widget_Helper_Form_Element_Text('yourname', NULL, NULL, _t('你的名字'), _t('在左上角头向下面,太长会自动...省略'));
+    $form->addInput($yourname);
+
     // ICP备案号
     $icpNum = new Typecho_Widget_Helper_Form_Element_Text('icpNum', NULL, NULL, _t('ICP备案号'), _t('管局爸爸很严厉,备案过程中最好关闭站点,如：苏ICP备19008833号'));
     $form->addInput($icpNum);
