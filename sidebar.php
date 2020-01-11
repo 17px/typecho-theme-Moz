@@ -34,7 +34,7 @@
                 <ul class="widget-list">
                     <?php $obj = $this->widget('Widget_Contents_Post_Recent', 'pageSize=10000') ?>
                     <?php if ($obj->have()) : ?>
-                        <? while ($obj->next()) : ?>
+                        <?php while ($obj->next()) : ?>
                             <?php if ($obj->password == NULL) : ?>
                                 <li class="recent">
                                     <a class="content" href="<?php $obj->permalink(); ?>">
@@ -44,20 +44,20 @@
                                     </a>
                                     <span class="modified-time"><?php diffTime($obj->modified) ?></span>
                                 </li>
-                            <? else : ?>
+                            <?php else : ?>
                                 <li class="recent locked">
                                     <a class="content" href="<?php $obj->permalink(); ?>">
                                         <?php if ($obj->hidden) : ?>
                                             <p class="article-name"><i class="fa fa-fw fa-lock"></i><?php subText($obj->title, 10) ?></p>
-                                        <? else : ?>
+                                        <?php else : ?>
                                             <p class="article-name"><i class="fa fa-fw fa-unlock"></i><?php subText($obj->title, 10) ?></p>
                                         <?php endif; ?>
                                     </a>
                                     <span class="modified-time"><?php diffTime($obj->modified) ?></span>
                                 </li>
                             <?php endif; ?>
-                        <? endwhile; ?>
-                    <? else : ?>
+                        <?php endwhile; ?>
+                    <?php else : ?>
                     <?php endif; ?>
                 </ul>
             </section>
