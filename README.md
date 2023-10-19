@@ -1,3 +1,6 @@
+## :warning: This project is no longer maintained :warning:
+
+
 # Moz v1.0
 
 > 无与伦比的追求冰冷的敲打着我的灵魂
